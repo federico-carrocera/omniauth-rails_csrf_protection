@@ -59,7 +59,7 @@ module OmniAuth
         @request = ActionDispatch::Request.new(env.dup)
 
         unless verified_request?
-          raise ActionController::InvalidCrossOriginRequest
+          raise ActionController::InvalidAuthenticityToken
         end
       end
 
